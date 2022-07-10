@@ -1,8 +1,15 @@
-import '../styles/globals.css'
+import '@fontsource/archivo'
 import type { AppProps } from 'next/app'
+import { RecoilRoot } from 'recoil'
+import GlobalStyles from '../components/GlobalStyles'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function TemplateApp({ Component, pageProps }: AppProps) {
+  return (
+    <RecoilRoot>
+      <Component {...pageProps} />
+      <GlobalStyles />
+    </RecoilRoot>
+  )
 }
 
-export default MyApp
+export default TemplateApp
