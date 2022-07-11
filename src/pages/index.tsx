@@ -1,19 +1,14 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import styled from 'styled-components'
-import { COLORS } from '@lib/design-tokens'
-import HomeBanner from '@sections/home/HomeBanner'
+import tw from 'twin.macro'
+import { COLORS } from '../lib/design-tokens'
+import HomeBanner from '../sections/home/HomeBanner'
 import {
   HomeBannerContent,
   HOME_BANNER_CONTENT,
 } from '@sections/home/HomeBanner/home-banner.content'
 
-const MainWrapper = styled.main`
-  min-height: 100%;
-  background-color: ${COLORS.ocean};
-  display: grid;
-  place-content: center;
-`
+const MainWrapper = tw.div`min-h-full bg-ocean grid place-content-center`
 
 type HomePageProps = {
   bannerContent: HomeBannerContent

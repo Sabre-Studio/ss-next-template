@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
-import { TYPOGRAPHY } from '@lib/design-tokens'
+import { GlobalStyles as BaseStyles } from 'twin.macro'
+import { TYPOGRAPHY } from '../../lib/design-tokens'
 
-const GlobalStyles = createGlobalStyle`
+const CustomStyles = createGlobalStyle`
 html {
   --font-sans: 
     '${TYPOGRAPHY.family.sans}', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
@@ -64,5 +65,12 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 `
+
+const GlobalStyles = () => (
+  <>
+    <BaseStyles />
+    <CustomStyles />
+  </>
+)
 
 export default GlobalStyles
