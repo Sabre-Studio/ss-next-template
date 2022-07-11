@@ -1,2 +1,2 @@
-export * from "./GlobalStyles";
-export { default } from "./GlobalStyles";
+export * from './GlobalStyles'
+export { default } from './GlobalStyles'

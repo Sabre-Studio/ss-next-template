@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "ts": "tsc --noEmit --incremental --preserveWatchOutput --pretty --watch"
+    "ts": "tsc --noEmit --incremental --preserveWatchOutput --pretty --watch",
+    "format": "prettier --write '{components,hooks,lib,pages,sections}/**/*.{json,md,css,js,jsx,ts,tsx}'"
   },
   "dependencies": {
     "@fontsource/archivo": "^4.5.7",

@@ -2,6 +2,11 @@ import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import styled from 'styled-components'
 import { COLORS } from '../lib/design-tokens'
+import HomeBanner from '../sections/home/HomeBanner'
+import {
+  HomeBannerContent,
+  HOME_BANNER_CONTENT,
+} from '../sections/home/HomeBanner/home-banner.content'
 
 const MainWrapper = styled.main`
   min-height: 100%;
@@ -10,13 +15,10 @@ const MainWrapper = styled.main`
   place-content: center;
 `
 
-const Heading = styled.h1`
-  color: ${COLORS.white};
-  font-size: 128px;
-`
-
-type HomePageProps = {}
-const HomePage: NextPage<HomePageProps> = () => {
+type HomePageProps = {
+  bannerContent: HomeBannerContent
+}
+const HomePage: NextPage<HomePageProps> = ({ bannerContent }) => {
   return (
     <>
       <Head>
@@ -25,7 +27,7 @@ const HomePage: NextPage<HomePageProps> = () => {
       </Head>
 
       <MainWrapper>
-        <Heading>Get to hacking!</Heading>
+        <HomeBanner content={bannerContent} />
       </MainWrapper>
     </>
   )
@@ -35,6 +37,8 @@ export default HomePage
 
 export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   return {
-    props: {},
+    props: {
+      bannerContent: HOME_BANNER_CONTENT,
+    },
   }
 }
