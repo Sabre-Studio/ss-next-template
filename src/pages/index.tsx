@@ -1,12 +1,12 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import styled from 'styled-components'
-import { COLORS } from '../lib/design-tokens'
-import HomeBanner from '../sections/home/HomeBanner'
+import { COLORS } from '@lib/design-tokens'
+import HomeBanner from '@sections/home/HomeBanner'
 import {
   HomeBannerContent,
   HOME_BANNER_CONTENT,
-} from '../sections/home/HomeBanner/home-banner.content'
+} from '@sections/home/HomeBanner/home-banner.content'
 
 const MainWrapper = styled.main`
   min-height: 100%;

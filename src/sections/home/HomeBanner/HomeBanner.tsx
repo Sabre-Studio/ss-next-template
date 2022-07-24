@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { COLORS } from '../../../lib/design-tokens'
+import { COLORS } from '@lib/design-tokens'
 import { HomeBannerContent } from './home-banner.content'
 
 const Heading = styled.h1`

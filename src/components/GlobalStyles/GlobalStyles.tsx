@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import { TYPOGRAPHY } from '../../lib/design-tokens'
+import { TYPOGRAPHY } from '@lib/design-tokens'
 
 const GlobalStyles = createGlobalStyle`
 html {
