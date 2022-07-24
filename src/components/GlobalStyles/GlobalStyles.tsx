@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import { GlobalStyles as BaseStyles } from 'twin.macro'
-import { TYPOGRAPHY } from '../../lib/design-tokens'
+import { TYPOGRAPHY } from '@lib/design-tokens'
 
 const CustomStyles = createGlobalStyle`
 html {
